@@ -1,0 +1,16 @@
+{% extends 'main/layout/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class='card' style='margin-left: 20px; margin-top: 40px; width: 70%;'>
+        <div class='card-body'>
+            <p style='color: red;'>*Для успешного добавления нового сообщения в очередь подождите 5 секунд. Обновите страницу</p>
+            <h5>{{ msg }}</h5>
+            <p>{{ username }}</p>
+        </div>
+    </div>
+
+    <button class="btn btn-dark" type="submit" href="{% url 'clear-queue' %}" style='margin-left: 20px; margin-top: 10px;'>Очистить очередь</button>
+
+{% endblock %}

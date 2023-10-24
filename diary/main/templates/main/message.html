@@ -1,0 +1,14 @@
+
+{% extends 'main/layout/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class='mes' style='width: 70%; margin-left: 20px; margin-top: 40px;'>
+        <form method="POST">
+            {% csrf_token %} {{form.as_p}}
+            <button class="btn btn-dark">Отправить</button>
+        </form>
+</div>
+
+{% endblock %}
